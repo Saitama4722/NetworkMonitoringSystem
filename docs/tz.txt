@@ -1,0 +1,151 @@
+# LAN Monitoring System — Project Specification
+
+## 1. General Description
+
+This project is a desktop application developed in C++/CLI using Windows Forms.
+The purpose of the system is to monitor the state of a local area network (LAN) and manage connection keys used for television broadcasting systems.
+
+The application is designed as a demonstration-level software product for academic purposes.
+It must be simple, stable, and fully functional, without unnecessary complexity.
+
+## 2. Main Goals
+
+The software must:
+
+* Monitor the availability of network devices
+* Display the current status of devices (online/offline)
+* Manage connection keys assigned to devices or systems
+* Store and retrieve data using a local database
+* Provide a clear and user-friendly graphical interface
+
+## 3. Functional Requirements
+
+### 3.1 Network Devices Management
+
+The system must allow:
+
+* Viewing a list of network devices
+* Adding a new device
+* Editing an existing device
+* Deleting a device
+
+Each device must include:
+
+* Unique identifier (ID)
+* Device name
+* IP address
+* Device type
+* Status (online/offline)
+
+---
+
+### 3.2 Device Status Monitoring
+
+The system must:
+
+* Allow checking the availability of a device using its IP address
+* Support checking a single device
+* Support checking all devices
+* Update device status after each check
+
+A simple ping-based approach is sufficient.
+
+---
+
+### 3.3 Key Management
+
+The system must:
+
+* Store a list of connection keys
+* Display whether each key is free or assigned
+* Show which device or system is using a key
+* Allow assigning a key to a device/system
+* Allow releasing a key
+
+Each key must include:
+
+* Unique identifier (ID)
+* Key name or number
+* Status (free/assigned)
+* Assigned device/system name (if any)
+* Optional note
+
+---
+
+### 3.4 Database
+
+The application must use a local SQLite database.
+
+The database must store:
+
+* Devices
+* Keys
+* Key assignments
+
+The database file must be created automatically on first run.
+
+---
+
+### 3.5 User Interface
+
+The application must provide a graphical interface using Windows Forms.
+
+Main requirements:
+
+* Main window (MainForm)
+* Tab or section for "Network Devices"
+* Tab or section for "Keys"
+* Tables (DataGridView) for displaying data
+* Buttons for CRUD operations
+* Buttons for checking device status
+* Buttons for assigning and releasing keys
+
+The interface must be simple, clear, and suitable for demonstration.
+
+---
+
+## 4. Technical Requirements
+
+* Language: C++/CLI
+* Framework: .NET (Windows Forms)
+* IDE: Visual Studio 2026
+* Database: SQLite (local file, no server)
+* No external heavy frameworks (Qt, etc.)
+* The project must compile without complex setup
+
+---
+
+## 5. Non-Functional Requirements
+
+* The application must compile and run without errors
+* The interface must be responsive and stable
+* The system must not require internet access
+* The project must be easy to open and build in Visual Studio
+
+---
+
+## 6. Project Scope
+
+This is a simplified implementation intended for demonstration.
+
+The system does NOT require:
+
+* Real-time monitoring
+* Complex network topology visualization
+* Multi-user support
+* Authentication system
+* High-performance optimization
+
+The focus is on correctness, clarity, and completeness of functionality.
+
+---
+
+## 7. Expected Result
+
+A working desktop application that:
+
+* Displays network devices
+* Checks their availability
+* Manages connection keys
+* Stores and loads data from a database
+* Can be demonstrated as a complete academic project
